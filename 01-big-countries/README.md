@@ -1,7 +1,7 @@
 # 595. Big Countries
-**Kategori :** `Basic Select`
+**Category :** `Basic Select`
 
-**Tingkat Kesulitan :**  `Easy`
+**Difficulty :**  `Easy`
 
 ## Deskripsi Masalah:
 Suatu negara dianggap besar jika:
@@ -16,9 +16,10 @@ Kembalikan tabel hasil dalam urutan apa pun.
 
 
 ## Strategi Analisis:
-1. Mendefinisikan kolom secara spesifik di bagian `select` sesuai permintaan yaitu menampilkan nama, populasi, dan luas wilayah negara-negara besar.
-2. Menentukan negara-negara besar dengan 2 kondisi (luas wilayah, populasi) dimana minimal salah satu dari kondisi harus bernilai `True`, maka dari itu digunakan operator logika `OR`.
-3. Menerapkan filter logika `>=` untuk menyaring syarat ambang batas yang telah ditentukan untuk luas wilayah dan populasi.
+1. **Melakukan Filter** untuk negara-negara yang akan ditampilkan menggunakan klausa `WHERE` dengan operator logika `OR` untuk memeriksa salah satu kondisi berikut harus terpenuhi:
+   * luas wilayah (`area >= 3.000.000` km) `OR`
+   * populasi (`population >= 25.000.000`)
+2. **Menampilkan Kolom** `name`, `population`, `area` menggunakan klausa `SELECT` dari tabel `World`.
 
 ## Solusi Query:
 ```
