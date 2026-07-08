@@ -16,7 +16,7 @@ Kembalikan tabel hasil dalam urutan apa pun.
 
 
 ## Strategi Analisis:
-1. **Melakukan Filter** untuk negara-negara yang akan ditampilkan menggunakan klausa `WHERE` dengan operator logika `OR` untuk memeriksa salah satu kondisi berikut harus terpenuhi:
+1. **Melakukan Filter** untuk negara-negara yang akan ditampilkan menggunakan klausa `WHERE` dengan operator logika `OR` untuk memeriksa salah satu kondisi berikut harus terpenuhi, serta operator perbandingan `>=` untuk memenuhi kata kunci "setidaknya" pada soal:
    * luas wilayah (`area >= 3.000.000` km) `OR`
    * populasi (`population >= 25.000.000`)
 2. **Menampilkan Kolom** `name`, `population`, `area` menggunakan klausa `SELECT` dari tabel `World`.
