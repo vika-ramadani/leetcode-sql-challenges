@@ -19,8 +19,8 @@ Kembalikan tabel hasil dalam urutan apa pun.
    kemudian menghitung jumlah transaksi yang disetujui tersebut menggunakan fungsi `SUM`.
    * Total nilai transaksi jika disetujui (`approved`) maka kembalikan `THEN` `amount`, kemudian menjumlahkan seluruh nilai transaksi menggunakan fungsi `SUM`.
    * Menghitung banyaknya transaksi yang terjadi menggunakan fungsi `COUNT(*)`.
-   * Menghitung total nilai transaksi keseluruhan menggunakan fungsi `SUM(amount)`
-4. **Pengelompokan:** Kemudian mengelompokkan berdasarkan masing-masing bulan di masing-masing negara juga menggunakan klausa `GROUP BY`.
+   * Menghitung total nilai transaksi keseluruhan menggunakan fungsi `SUM(amount)`.
+4. **Transformasi dan Pengelompokan:** Melakukan fungsi transformasi untuk menampilkan hasil per bulan yaitu dengan fungsi `DATE_FORMAT(trans_date, '%Y-%m')` untuk kemudian mengelompokkan berdasarkan masing-masing bulan dengan di masing-masing negara dengan menggunakan klausa `GROUP BY`.
    
 ## Solusi Query:
 ```sql
